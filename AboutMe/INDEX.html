@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>About Me</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./MAIN.css" />
+    <!--link to my JavaScript-->
+    <script src="./script.js"></script>
+    <!--Quicksand Font-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/59da1c7ece.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Div Wrapper-->
+    <div id="cleardiv">
+      <!--Flip Card-->
+      <div
+        class="flip-card"
+        onmouseover="PlaySound('mySound')"
+        onmouseout="StopSound('mySound')"
+      >
+        <div class="flip-card-inner">
+          <div class="card">
+            <img src="aboutme.png" id="about" />
+            <audio id="mySound" src="sparkleflip.mp3" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card">
+              <div id="bg">
+                <h4 id="name">
+                  <i><b>✧･ﾟ: *✧･ﾟ:* Frances Caldwell *:･ﾟ✧*:･ﾟ✧</b></i>
+                </h4>
+                <img src="frances.png" id="me" />
+                <h4 id="title">
+                  <i><b>✧･ﾟ: *✧･ﾟ:* UX Developer *:･ﾟ✧*:･ﾟ✧</b></i>
+                </h4>
+                <i class="fas fa-scroll" style="color: #d47daf"></i>
+                <span id="major"> </span>
+                <br />
+                <i class="fas fa-envelope" style="color: #d47daf"></i>
+                <span id="email">fracaldw@uat.edu</span>
+                <br />
+                <i class="fas fa-graduation-cap" style="color: #d47daf"></i>
+                <span id="gradyear">SUMMER 2023</span>
+                <br />
+                <ul class="menu">
+                  <li>
+                    <a href="#" id="work">˚ʚ♡ɞ˚WORK˚ʚ♡ɞ˚</a>
+
+                    <ul id="worklist">
+                      <li><a>Front-End Development</a></li>
+                      <li><a>UX/UI Design</a></li>
+                      <li><a>Chatbot/Voice Assistant Development</a></li>
+                      <li><a>Web Development</a></li>
+                      <li><a>Desktop Development</a></li>
+                      <li><a>Graphic Design</a></li>
+                      <li><a>Languages:</a></li>
+                      <ol id="lang">
+                        <li><a>CSS</a></li>
+                        <li><a>HTML</a></li>
+                        <li><a>JavaScript</a></li>
+                        <li><a>Java</a></li>
+                        <li><a>Python</a></li>
+                        <li><a>C#</a></li>
+                        <li><a>C++</a></li>
+                        <li><a>XAML</a></li>
+                        <li><a>SQL</a></li>
+                      </ol>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menu">
+                  <li>
+                    <a href="#" id="hobbies">˚ʚ♡ɞ˚HOBBIES˚ʚ♡ɞ˚</a>
+
+                    <ul id="hobbylist">
+                      <li><a>Stargazing</a></li>
+                      <li><a>Digital Illustration</a></li>
+                      <li>
+                        <img src="spacegrng.png" id="art" />
+                      </li>
+                      <li><a>Video Editing</a></li>
+                      <li><a>Guitar</a></li>
+                      <li><a>Cooking</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <script>
+                  displayText("major");
+                  displayText("email");
+                  displayText("gradyear");
+                  displayShine("flipglow");
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

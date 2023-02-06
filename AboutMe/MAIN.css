@@ -1,0 +1,305 @@
+/* Body */
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+}
+* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: radial-gradient(#ffeaf6, #ebadd0, #d47daf, #d47daf, #924671);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: #ebadd0;
+}
+
+/* Div Wrapper */
+#cleardiv {
+  width: 97.5%;
+  height: 37em;
+  border: 10px double #ebadd0;
+  margin: 15px;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  transition: 0.3s;
+  width: 100%;
+  background-color: #ffeaf6;
+  border: 4px solid #f5cbe3;
+  box-shadow: inset 0 0 0 12px #fadbed, inset 0 0 0 16px #f6cee5,
+    inset 0 0 0 20px #f5cbe3, inset 0 0 0 20px #f1bedb, inset 0 0 0 20px #ebadd0;
+  margin: 0 auto;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  position: relative;
+  font-family: "Quicksand";
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.95);
+}
+
+.card:hover {
+  box-shadow: outset 0 8px 16px 0 rgba(194, 80, 145, 0.9);
+}
+
+/* About Styling */
+#about {
+  border: 8px solid #f5cbe3;
+  width: 110%;
+  height: 100%;
+  transform: scale(1.1);
+  margin-left: -5%;
+}
+
+/* Card Text Styling */
+h4 {
+  color: #d27bac;
+  border: 2px;
+  text-align: center;
+}
+
+span {
+  color: #d47daf;
+  font-size: 16px;
+  line-height: 2em;
+  font-size: 16px;
+}
+
+#name {
+  margin-bottom: 2%;
+  background-color: #fff;
+}
+
+#title {
+  color: #d27bac;
+  margin-bottom: 5%;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  border-color: #d47daf;
+  border: 2px;
+  border-style: solid;
+  opacity: 75%;
+}
+
+/* Photo of Me Styling */
+#me {
+  border: 8px double rgb(228, 159, 194);
+  width: 100%;
+  height: 60%;
+}
+
+/* Flip Card */
+.flip-card {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  width: 34%;
+}
+
+.flip-card-inner {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 16px 0 rgba(194, 80, 145, 0.5);
+  transform: scale(0.95);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  width: 100%;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.card:hover {
+  background-color: #ffcde9;
+  background-image: #ffcde9;
+  animation: none;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  background-image: linear-gradient(
+    var(--rotate),
+    #ffcde9,
+    #ebadd0 43%,
+    #d47daf
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+  opacity: 50%;
+}
+
+#bg {
+  background-color: #ffcde9;
+  padding: 10%;
+  margin: -10%;
+  height: 111%;
+  border: 8px double #df9dc2;
+}
+
+.menu {
+  display: block;
+  margin: 10%;
+  position: relative;
+  width: 200px;
+  bottom: 20%;
+  left: 10%;
+}
+
+#hobbies {
+  background-color: #d27bac;
+  color: #fff;
+  width: 150px;
+  height: 35px;
+  border: 2px solid #ebadd0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Quicksand";
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  display: block;
+  padding: 6px 5px 5px 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#work {
+  background-color: #ebadd0;
+  color: #fff;
+  width: 120px;
+  height: 35px;
+  border: 2px solid #d27bac;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Quicksand";
+  position: absolute;
+  left: 60%;
+  bottom: 10%;
+  display: block;
+  padding: 6px 5px 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 62.5%;
+}
+
+#work:hover {
+  background-color: #d27bac;
+}
+
+#hobbies:hover {
+  background-color: #ebadd0;
+}
+
+.menu ul {
+  background: #ffcde9;
+  border: 2px solid #ebadd0;
+  height: 100%;
+  left: 195%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  bottom: 100%;
+  width: 100%;
+}
+
+.menu li:hover ul {
+  height: 375px;
+  width: 300px;
+  opacity: 1;
+  transform: translateY(0);
+  bottom: 50%;
+}
+
+.menu ul a {
+  background: #ffeaf6;
+  color: #d27bac;
+  border: 2px solid #ffcde9;
+  display: block;
+  padding: 5px 20px;
+}
+
+#lang {
+  float: left;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type: none;
+  font-size: 15.5px;
+}
+
+#art {
+  width: 195px;
+  height: 195px;
+  filter: opacity(60%) brightness(125%);
+  border: 5px double #d47daf;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
