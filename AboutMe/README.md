@@ -1,4 +1,5 @@
 ABOUT ME by Frances Caldwell
+
 Web Dev Files:
 INDEX.html - The HTML document containing the content of my about me page.
 MAIN.css - The CSS file containing the styling of my about me page.
