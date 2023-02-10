@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>Crossword</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./crossword.css" />
+    <!--link to my JavaScript-->
+    <script src="./crossword.js"></script>
+  </head>
+
+  <body>
+    <div id="gameWrapper">
+      <h1><i>❀ Floral Crossword ❀</i></h1>
+      <!-- Table displays crossword puzzle -->
+      <!-- tr represents each row in the table -->
+      <!-- td represents the letters and blank spaces in each row -->
+      <div class="column">
+        <table id="puzzle">
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="letter"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="column">
+        <table id="clues">
+          <tr>
+            <td class="text">
+              <u><b>Across</b></u>
+            </td>
+            <td class="text">
+              <u><b>Down</b></u>
+            </td>
+          </tr>
+          <tr>
+            <td class="text">1. Daisy - Donald Duck's girlfriend</td>
+            <td class="text">1. Dahlia - The national flower of Mexico</td>
+          </tr>
+          <tr>
+            <td class="text">
+              2. Camellia - Leaves from this flower are harvested to make the
+              most common tea around the world
+            </td>
+            <td class="text">2. Lilac - Has the same name as a color</td>
+          </tr>
+          <tr>
+            <td class="text">
+              3. Flower - A plant with a name that sounds like a cooking
+              ingredient
+            </td>
+            <td class="text">
+              3. Azalea - A town where you can get slowpoke in Pokemon Heart
+              Gold & Soul Silver
+            </td>
+          </tr>
+          <tr>
+            <td class="text">
+              4. Bluebell - An ice cream company is named after this flower
+            </td>
+            <td class="text">
+              4. Rose - Valentines Day flower symbolizing love, romance, and
+              devotion
+            </td>
+          </tr>
+          <tr>
+            <td class="text">
+              5. Pancy - This flower was used to make a love potion in
+              Shakespeare's A Midsummer Night's Dream
+            </td>
+            <td class="text">5. Aster - Name comes from Greek word for star</td>
+          </tr>
+          <tr>
+            <td class="text">
+              6. Tulip - This flower is rumored to have effected the Dutch
+              economy in the 17th-Century
+            </td>
+            <td class="text">
+              6. Crocus - An expensive spice is a product of this flower
+            </td>
+          </tr>
+          <tr>
+            <td class="text">7. Daffodil - The national flower of Wales</td>
+            <td class="text">
+              7. Peony - Named after the greek god of medicine and healing
+            </td>
+          </tr>
+          <tr>
+            <td class="text">8. Iris - Colored part of an eye</td>
+            <td class="text">
+              8. Primrose - A fuchsia color of this flower was used as a symbol
+              for Italy's COVID vaccination campaign in 2020
+            </td>
+          </tr>
+          <tr>
+            <td class="text">9. Bloom - a flourishing stage</td>
+            <td class="text">9. Blossom - The pink powerpuff girl</td>
+          </tr>
+          <tr>
+            <td class="text">
+              10. Snowdrop - A collector of this flower is called a
+              Galanthophile
+            </td>
+            <td class="text"></td>
+          </tr>
+          <tr>
+            <td class="text">
+              11. Freesia - this flower was named after botanist Christian
+              Friedrich Ecklon's friend to sybolize their friendship
+            </td>
+            <td class="text"></td>
+          </tr>
+          <tr>
+            <td class="text">12. Poppy - Harvested to make opium</td>
+            <td class="text"></td>
+          </tr>
+        </table>
+      </div>
+      <script>
+        // loads the crossword puzzle in the browser
+        loadCrosswordPuzzle();
+      </script>
+    </div>
+  </body>
+</html>
