@@ -1,0 +1,52 @@
+body {
+  background-color: pink;
+  background-image: url("./images/bg.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: contain;
+  zoom: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-width: 0;
+}
+
+.centered {
+  background-color: rgba(251, 166, 194, 0.601);
+  border: 10px double pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 650px;
+  box-shadow: 8px 8px 8px rgba(233, 156, 174, 0.8);
+  margin: -5%;
+  overflow: hidden;
+}
+
+#slideshow {
+  border: 10px solid pink;
+  width: 950px;
+  height: 600px;
+}
+
+h1 {
+  color: pink;
+  font-size: 40px;
+  background: rgba(255, 233, 236, 0.9);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 0 0 0 1.5%;
+  border: 5px solid white;
+  text-shadow: -1px 0 rgb(255, 155, 202), 0 1px rgb(255, 155, 202),
+    1px 0 rgb(255, 155, 202), 0 -1px rgb(255, 155, 202);
+}
