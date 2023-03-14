@@ -1,0 +1,211 @@
+/* Body */
+html {
+  min-height: 100%;
+  overflow-y: hidden;
+  background-color: #fbdde3;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #551a8b;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 665px; /* Should be removed. Only for demonstration */
+  margin-top: -4%;
+  padding: 3%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#gameCol {
+  background-color: #e4fdfe;
+}
+#rngScore {
+  background-color: #c3c5fd;
+}
+
+h1,
+th {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  margin-top: 6%;
+  color: #551a8b;
+  font-size: 32px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 5px solid #a999f5;
+  width: 100%;
+  height: 85%;
+}
+
+#scoreTable {
+  display: block;
+  overflow: scroll;
+  height: 45%;
+}
+
+th {
+  padding: 10px;
+  background-color: #f2d6f6;
+  border: 2px #c3c5fd solid;
+  text-align: center;
+  width: 20%;
+}
+td {
+  padding: 10px;
+  background-color: white;
+  border: 2px #c3c5fd solid;
+  text-align: center;
+  width: 20%;
+}
+
+#free,
+.pickedBG {
+  background: #fbdde3;
+}
+
+.winningBG {
+  background: #f8f1cc;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #551a8b;
+  font-size: 90px;
+  margin-bottom: 5%;
+}
+
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #551a8b;
+  font-size: 22px;
+  padding: 2%;
+  margin-bottom: 5%;
+  background-color: #f2d6f6;
+  border: 2px solid #a999f5;
+  text-align: left;
+}
+
+button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #551a8b;
+  font-size: 24px;
+  padding: 2%;
+  margin-top: 8%;
+  background-color: #f8f1cc;
+  border: 2px solid #a999f5;
+  text-align: left;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #e4fdfe;
+}
+
+h5 {
+  background-color: #a999f5;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.dropbtn {
+  background-color: #a999f5;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 13.55vw;
+  width: 100%;
+  height: 3.9vh;
+  padding: 0px;
+  text-align: right;
+  padding-right: 5%;
+  margin-top: 0%;
+  border-collapse: separate;
+  border-radius: 0px;
+  border: 2px solid #a999f5;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #f2d6f6;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 475px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: -76%;
+  height: 50vh;
+}
+
+.dropdown-content a {
+  color: #551a8b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+#next {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: -5%;
+  margin-top: -5%;
+  margin-left: 3%;
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-color: #fbdde3;
+  padding: 6% 2% 5% 2%;
+}
+
+/* Style the button */
+#fullscrn {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  bottom: 2%;
+  right: 1%;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>Bingo</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./bingo.css" />
+    <!--link to my JavaScript-->
+    <script src="./bingo.js"></script>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="column" id="gameCol">
+        <h1><i>❀ Sweet Bingo ❀</i></h1>
+        <table id="bingo">
+          <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <td id="square0">&nbsp;</td>
+            <td id="square5">&nbsp;</td>
+            <td id="square10">&nbsp;</td>
+            <td id="square14">&nbsp;</td>
+            <td id="square19">&nbsp;</td>
+          </tr>
+          <tr>
+            <td id="square1">&nbsp;</td>
+            <td id="square6">&nbsp;</td>
+            <td id="square11">&nbsp;</td>
+            <td id="square15">&nbsp;</td>
+            <td id="square20">&nbsp;</td>
+          </tr>
+          <tr>
+            <td id="square2">&nbsp;</td>
+            <td id="square7">&nbsp;</td>
+            <td id="free">Free</td>
+            <td id="square16">&nbsp;</td>
+            <td id="square21">&nbsp;</td>
+          </tr>
+          <tr>
+            <td id="square3">&nbsp;</td>
+            <td id="square8">&nbsp;</td>
+            <td id="square12">&nbsp;</td>
+            <td id="square17">&nbsp;</td>
+            <td id="square22">&nbsp;</td>
+          </tr>
+          <tr>
+            <td id="square4">&nbsp;</td>
+            <td id="square9">&nbsp;</td>
+            <td id="square13">&nbsp;</td>
+            <td id="square18">&nbsp;</td>
+            <td id="square23">&nbsp;</td>
+          </tr>
+        </table>
+        <p>
+          <a href="INDEX.html" id="reload">Click here</a> to create a new card.
+        </p>
+      </div>
+      <div class="column" id="rngScore">
+        <button id="RNG"><i>Generate Random Number</i></button>
+        <h2 id="randNum"></h2>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">➤</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">▀▄▀▄▀▄🅁🄾🅄🄽🄳 1▀▄▀▄▀▄</a>
+            <a href="#home" id="next"
+              >✭1: 58 | ✭2: 47 | ✭3: 25 | ★4: 45 | ✭5: 60 |
+            </a>
+            <a href="#home" id="next">──────────────────────</a>
+            <a href="#home">▀▄▀▄▀▄🅁🄾🅄🄽🄳 2▀▄▀▄▀▄</a>
+            <a href="#home" id="next"
+              >✭1: 58 | ★2: 47 | ✭3: 25 | ✭4: 45 | ★5: 60 |
+            </a>
+            <a href="#home" id="next">──────────────────────</a
+            ><a href="#home">▀▄▀▄▀▄🅁🄾🅄🄽🄳 3▀▄▀▄▀▄</a>
+            <a href="#home" id="next"
+              >✭1: 58 | ★2: 47 | ✭3: 25 | ✭4: 45 | ✭5: 60 |
+            </a>
+            <a href="#home" id="next">──────────────────────</a
+            ><a href="#home">▀▄▀▄▀▄🅁🄾🅄🄽🄳 4▀▄▀▄▀▄</a>
+            <a href="#home" id="next"
+              >★1: 58 | ✭2: 47 | ★3: 25 | ✭4: 45 | ✭5: 60 |
+            </a>
+            <a href="#home" id="next">──────────────────────</a>
+            <a href="#home" id="next">. . .</a>
+            <a href="#home" id="next">. . . </a>
+          </div>
+        </div>
+        <table id="scoreTable">
+          <tr>
+            <th>round #</th>
+            <th>win | loss</th>
+          </tr>
+          <tr>
+            <td id="roundNum" value="0">round #</td>
+            <td>win</td>
+          </tr>
+          <tr>
+            <td id="roundNum" value="0">round #</td>
+            <td>loss</td>
+          </tr>
+          <tr>
+            <td id="roundNum" value="0">round #</td>
+            <td>win</td>
+          </tr>
+        </table>
+        <h3>Total Score:</h3>
+        <button onclick="toggleFullscreen();" id="fullscrn">🔍</button>
+      </div>
+    </div>
+  </body>
+</html>
