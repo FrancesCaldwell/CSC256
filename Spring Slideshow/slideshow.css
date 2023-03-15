@@ -1,3 +1,4 @@
+/*The background image repeated in the background*/
 body {
   background-color: pink;
   background-image: url("./images/bg.jpg");
@@ -11,10 +12,12 @@ body {
   align-items: center;
 }
 
+/*Image style*/
 img {
   border-width: 0;
 }
 
+/*The TV*/
 .centered {
   background-color: rgba(251, 166, 194, 0.601);
   border: 10px double pink;
@@ -28,12 +31,14 @@ img {
   overflow: hidden;
 }
 
+/*Slideshow image size*/
 #slideshow {
   border: 10px solid pink;
   width: 950px;
   height: 600px;
 }
 
+/*Position and styling of heading*/
 h1 {
   color: pink;
   font-size: 40px;
