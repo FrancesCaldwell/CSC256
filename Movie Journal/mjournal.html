@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>Movie Journal</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./mjournal.css" />
+    <!--link to my JavaScript-->
+    <script src="./mjournal.js"></script>
+  </head>
+
+  <body>
+    <div class="centered">
+      <!--Welcome Pop-up-->
+      <div id="pop-up">
+        <h1>Welcome to the 30 Day Movie Challenge!</h1>
+        <p>Watch one movie every day and review it.</p>
+        <button id="exit" onclick="closeButton()">start</button>
+      </div>
+      <div id="column">
+        <!--Enter Movie Title Input-->
+        <input type="text" placeholder="Search title.." id="searchTitle" />
+        <!--Add Movie Title-->
+        <button type="button" id="addMovie" onclick="addMovie()">add+</button>
+        <!--Movie Library Dropdown-->
+        <ul class="menu">
+          <!--Movie Library List-->
+          <a href="#" id="movies">🕮 Library 🕮</a>
+          <li>
+            <ul id="movieList"></ul>
+          </li>
+        </ul>
+      </div>
+      <div id="column">
+        <!--Film Review-->
+        <div id="filmReview">
+          <!--Film Title-->
+          <h1
+            id="filmTitle"
+            ondblclick="this.contentEditable=true;changeTitle();"
+            contenteditable
+          >
+            Film Title
+          </h1>
+          <!--Film Review TextArea-->
+          <textarea id="review1" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review2" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review3" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review4" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review5" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review6" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review7" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review8" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review9" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review10" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review11" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review12" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review13" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review14" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review15" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review16" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review17" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review18" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review19" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review20" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review21" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review22" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review23" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review24" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review25" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review26" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review27" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review28" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review29" name="review" cols="40" rows="5"></textarea>
+          <textarea id="review30" name="review" cols="40" rows="5"></textarea>
+        </div>
+        <!-- Div For Progress Bar -->
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 0%"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            id="progressbar"
+          >
+            0%
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

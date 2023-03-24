@@ -1,0 +1,214 @@
+/*Body Styling*/
+body {
+  background-color: black;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  overflow: scroll;
+  bottom: 0;
+  height: 98vh;
+}
+/*Text Styling*/
+p {
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+}
+/*Heading 1 Styling*/
+h1 {
+  margin-top: 70%;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: goldenrod;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+/*Pop-up Styling*/
+#pop-up {
+  background-image: url(./clapboard.png);
+  background-size: cover;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  z-index: 98;
+  margin-bottom: 0%;
+}
+/*exit Button Styling*/
+#exit {
+  background-color: #4c4569;
+  color: white;
+  margin: 5%;
+  width: 25%;
+  height: 5%;
+}
+/*Content Styling*/
+.centered {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 750px;
+  text-align: center;
+  margin: 4%;
+  padding: 0px;
+}
+#column {
+  width: 50%;
+  height: 100%;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+/*Search Bar Styling*/
+input[type="text"] {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+}
+/*Search Bar Styling*/
+#addMovie {
+  width: 10%;
+  height: 7.5%;
+  margin-left: -5%;
+  margin-top: 1%;
+  background-color: #4c4569;
+  color: white;
+  border-radius: 5px;
+}
+/*Movie Library Menu Styling*/
+.menu {
+  position: relative;
+  width: 90%;
+  padding: 0px;
+}
+/*Library Section Styling*/
+#movies {
+  background-color: #242329;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  font-size: 14px;
+  font-family: "Quicksand";
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  word-spacing: 75px;
+  font-size: 25px;
+  overflow: hidden;
+}
+.menu ul {
+  height: 375px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  border: 2px solid white;
+  background-color: #161517;
+  font-size: 20px;
+  overflow: hidden;
+}
+.menu li:hover ul {
+  height: 375px;
+  width: 100%;
+  opacity: 1;
+  text-align: center;
+  overflow: scroll;
+}
+.menu ul a {
+  background: #242329;
+  color: white;
+  border: 2px solid #161517;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.menu ul a:hover {
+  background-color: #4c4569;
+}
+.menu ul a:focus {
+  background-color: #4c4569;
+}
+#filmTitle {
+  color: white;
+  background-color: #242329;
+  font-size: 40px;
+  height: 10%;
+  margin: 0px;
+  padding: 1%;
+}
+/*Film Review Section Styling*/
+#filmReview {
+  height: 75%;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  border: 2px solid white;
+  background-color: black;
+}
+#review1,
+#review2,
+#review3,
+#review4,
+#review5,
+#review6,
+#review7,
+#review8,
+#review9,
+#review10,
+#review11,
+#review12,
+#review13,
+#review14,
+#review15,
+#review16,
+#review17,
+#review18,
+#review19,
+#review20,
+#review21,
+#review22,
+#review23,
+#review24,
+#review25,
+#review26,
+#review27,
+#review28,
+#review29,
+#review30 {
+  width: 92%;
+  height: 70%;
+  padding: 2%;
+  font-size: 15px;
+  margin-left: 1.5%;
+  display: none;
+}
+
+/*Progress Bar Styling*/
+.progress {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+  width: 500%;
+  height: 3%;
+  border-radius: 5px;
+}
+#progressbar {
+  height: 100%;
+  width: 0%;
+  background-color: #4c4569;
+  color: transparent;
+  border-radius: 5px;
+}
