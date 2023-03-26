@@ -212,3 +212,22 @@ input[type="text"] {
   color: transparent;
   border-radius: 5px;
 }
+
+/*Clear Button Styling*/
+#clear {
+  position: fixed;
+  width: 5%;
+  height: 5%;
+  background-color: #4c4569;
+  color: white;
+}
+
+/*Order Button Styling*/
+#order {
+  position: fixed;
+  right: 0;
+  width: 5%;
+  height: 5%;
+  background-color: #4c4569;
+  color: white;
+}
