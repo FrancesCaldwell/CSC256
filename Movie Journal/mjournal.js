@@ -385,3 +385,21 @@ function increment() {
       "<h1>Congratulations! <br> You completed the 30-day challenge!</h1><button id='exit' onclick='closeButton()'>exit</button>";
   }
 }
+
+function clearButton() {
+  libList.length = 0;
+  document.getElementById("movieList").innerHTML = "";
+  document.getElementById("progressbar").setAttribute("style", "width: 0%;");
+  document.getElementById("progressbar").innerHTML = "0%";
+  alert("You cleared your movie list!");
+  document.getElementById("filmTitle").innerHTML = "Film Title";
+}
+
+function orderButton() {
+  // storing the movieList id within the ul variable
+  var ul = document.getElementById("movieList");
+  // sort movie list
+  Array.from(ul.getElementsByTagName("a"))
+    .sort((a, b) => a.textContent.localeCompare(b.textContent))
+    .forEach((a) => ul.appendChild(a));
+}
