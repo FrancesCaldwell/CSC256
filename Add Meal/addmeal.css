@@ -1,0 +1,112 @@
+/*The background image repeated in the background*/
+body {
+  background-color: #dbd4c9;
+  zoom: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Image style*/
+img {
+  border-width: 0;
+}
+
+/*Container*/
+.centered {
+  background-color: white;
+  border: 2px solid white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 1500px;
+  height: 1200px;
+  margin: -5%;
+  overflow: hidden;
+}
+
+/*Header Styling*/
+.centered header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px 10px;
+}
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  background: #f2f2f2;
+}
+header .icons span:hover {
+  background: #f2f2f2;
+}
+header .icons span:last-child {
+  margin-right: -10px;
+}
+
+/*Table Styling*/
+table {
+  height: 60%;
+  border: 2px solid #dbd4c9;
+  background-color: black;
+}
+table th {
+  background-color: #757f5d;
+}
+table td {
+  width: calc(100% / 7);
+  background-color: white;
+}
+table td:hover {
+  background-color: #f2f2f2;
+}
+
+/*Text Styling*/
+h1 {
+  color: #757f5d;
+  width: 100%;
+  font-size: 35px;
+  background: #dbd4c989;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  text-shadow: -1px 0 #959d80, 0 1px #959d80, 1px 0 #959d80, 0 -1px #959d80;
+}
+h2 {
+  color: #474d3b;
+}
+
+/*Add Meal Menu Section Styling*/
+#addMenuSection {
+  background-color: #aab3949b;
+  text-align: center;
+  padding: 2%;
+  border: 2px solid black;
+}
+/*Add Button*/
+#add {
+  background-color: #757f5d;
+  color: white;
+  text-align: center;
+  width: 25%;
+}
+
+/*Center Table Titles*/
+.breakfast {
+  text-align: center;
+}
+.lunch {
+  text-align: center;
+}
+.dinner {
+  text-align: center;
+}
