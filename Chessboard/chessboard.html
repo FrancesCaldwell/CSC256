@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>Chessboard</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./chessboard.css" />
+    <!--link to my JavaScript-->
+    <script src="./chessboard.js"></script>
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/59da1c7ece.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--The Heading-->
+    <h1>
+      <i>༺♥༻❀༺♥༻ Chessboard ༺♥༻❀༺♥༻</i>
+    </h1>
+    <!--Center Div-->
+    <div class="centered">
+      <!--Chessboard Placeholder-->
+      <div id="chessboard"></div>
+    </div>
+    <script>
+      // store chessboard element in chessboard variable
+      var chessboard = document.getElementById("chessboard");
+
+      // makes 64 squares
+      // creates each row
+      for (var i = 0; i < 8; i++) {
+        // creates each column
+        for (var j = 0; j < 8; j++) {
+          // creates new element and stores it in chessSquare variable
+          var chessSquare = document.createElement("div");
+          // assign class name to squares
+          chessSquare.className = "chess-square";
+          // every other square is darker pink
+          if ((i + j) % 2 == 0) {
+            chessSquare.style.backgroundColor = "rgb(255, 170, 184, .5)";
+          }
+          // add squares to board
+          chessboard.appendChild(chessSquare);
+        }
+      }
+    </script>
+  </body>
+</html>
