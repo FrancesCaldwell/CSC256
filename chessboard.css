@@ -1,0 +1,57 @@
+/*The background image repeated in the background*/
+body {
+  background-color: pink;
+  zoom: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*The TV*/
+.centered {
+  background-color: white;
+  border: 10px double pink;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  box-shadow: 8px 8px 8px rgba(233, 156, 174, 0.8);
+  margin: 1%;
+  overflow: hidden;
+  padding: 2%;
+  text-align: center;
+}
+
+/*Position and styling of heading*/
+h1 {
+  color: pink;
+  font-size: 30px;
+  background: rgba(255, 233, 236, 1);
+  padding: 10px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0 0 0 1.5%;
+  border: 2px solid white;
+  text-shadow: -1px 0 rgb(255, 155, 202), 0 1px rgb(255, 155, 202),
+    1px 0 rgb(255, 155, 202), 0 -1px rgb(255, 155, 202);
+  width: 100%;
+  position: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*Chessboard Styling*/
+#chessboard {
+  width: 400px;
+  height: 400px;
+  border: 8px double rgb(255, 170, 184, 0.75);
+}
+.chess-square {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 223, 228, 0.5);
+}
