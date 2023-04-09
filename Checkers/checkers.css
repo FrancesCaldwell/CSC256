@@ -1,0 +1,68 @@
+/*The background image repeated in the background*/
+body {
+  background-color: rgb(255, 234, 237);
+  zoom: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Position and styling of heading*/
+h1 {
+  color: pink;
+  font-size: 30px;
+  background: rgba(255, 233, 236, 1);
+  padding: 10px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0 0 0 1.5%;
+  border: 2px solid white;
+  text-shadow: -1px 0 rgb(255, 155, 202), 0 1px rgb(255, 155, 202),
+    1px 0 rgb(255, 155, 202), 0 -1px rgb(255, 155, 202);
+  width: 100%;
+  position: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*Chessboard Styling*/
+#checkers {
+  margin: 5%;
+  width: 400px;
+  height: 400px;
+  border: 8px double rgb(255, 170, 184, 0.75);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.square {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 223, 228, 0.5);
+}
+
+/*Checker Pieces Styling*/
+.darkPink {
+  background-color: rgb(255, 170, 184, 0.35);
+}
+.checker {
+  width: 45px;
+  height: 45px;
+  margin: 2.5px;
+  border-radius: 50%;
+  display: inline-block;
+  aspect-ratio: 1;
+  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+.checker-w {
+  border-image: radial-gradient(rgb(255, 244, 245) 69%, #0000 70%) 84.5%
+    fill/100%;
+}
+.checker-b {
+  border-image: radial-gradient(rgb(249, 174, 192) 69%, #0000 70%) 84.5%
+    fill/100%;
+}
