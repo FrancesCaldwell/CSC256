@@ -1,0 +1,242 @@
+/*Body styling*/
+body {
+  background-color: rgb(147, 156, 131);
+  zoom: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+/*Quiz form styling*/
+#quizForm {
+  background-color: white;
+  border: 10px double darkolivegreen;
+  display: block;
+  justify-content: center;
+  width: 75%;
+  height: auto;
+  box-shadow: 8px 8px 8px rgba(84, 91, 72, 0.5);
+  overflow: hidden;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(142, 157, 136);
+}
+
+/*Position and styling of heading*/
+h1 {
+  color: rgb(147, 156, 131);
+  font-size: 30px;
+  background: rgba(202, 208, 190, 0.5);
+  padding: 10px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0 0 0 1.5%;
+  border: 2px solid white;
+  text-shadow: -1px 0 darkolivegreen, 0 1px darkolivegreen, 1px 0 darkolivegreen,
+    0 -1px darkolivegreen;
+  width: 100%;
+  position: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*Stying of all buttons*/
+button {
+  height: 35px;
+  width: 30%;
+  background-color: rgb(147, 156, 131);
+  border: 2px solid darkolivegreen;
+  color: white;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  letter-spacing: 5px;
+}
+button:hover {
+  background-color: rgb(131, 143, 114);
+}
+
+/*Stying of question containers*/
+.container {
+  display: flex;
+  margin: 4%;
+  padding: 1%;
+  background-color: rgb(202, 208, 190);
+  border-radius: 10px;
+  border: 2px solid darkolivegreen;
+  font-size: 18px;
+  color: rgb(97, 109, 79);
+  overflow: hidden;
+}
+.smallContainer {
+  display: flex;
+  margin: 4% 4% 4% 24%;
+  padding: 1%;
+  background-color: rgb(202, 208, 190);
+  border-radius: 10px;
+  border: 2px solid darkolivegreen;
+  font-size: 18px;
+  color: rgb(97, 109, 79);
+  overflow: hidden;
+  width: 50%;
+}
+
+/*Stying of questions*/
+ol {
+  background-color: white;
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: darkolivegreen;
+  width: 90%;
+  height: 50%;
+  font-weight: bold;
+  padding: 5%;
+}
+
+/*Stying of checkbox and radio buttons*/
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: darkolivegreen;
+  width: 20px;
+  height: 20px;
+}
+#allergyCheckboxes,
+#medicalCheckboxes,
+#dietCheckboxes {
+  display: none;
+  border: 1px darkgray solid;
+  background-color: white;
+  margin-left: 10%;
+  text-align: left;
+  overflow-y: scroll;
+  width: 100%;
+  height: 80px;
+}
+#allergyCheckboxes label,
+#medicalCheckboxes label,
+#dietCheckboxes label {
+  display: block;
+}
+#allergyCheckboxes label:hover,
+#medicalCheckboxes label:hover,
+#dietCheckboxes label:hover {
+  background-color: rgb(147, 156, 131);
+}
+#plantbasedCheckboxes {
+  background-color: whitesmoke;
+  font-size: 15px;
+  margin-left: 5%;
+  width: 75%;
+  border-radius: 5px;
+}
+label {
+  font-size: 15px;
+  color: darkolivegreen;
+}
+
+/*Stying of select*/
+select {
+  margin-left: 10%;
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 1px;
+}
+
+/*Stying of textarea*/
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/*Stying of quiz description*/
+#quizDesc {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/*Stying of multiselect box*/
+.multiselect {
+  width: auto;
+  margin-right: 5%;
+}
+.selectBox {
+  position: relative;
+}
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+  color: darkolivegreen;
+}
+
+/*Stying of weight & height input/select*/
+#select-weight,
+#input {
+  width: 100%;
+  font-weight: bold;
+  color: darkolivegreen;
+}
+#select-height,
+#feetInput,
+#inchesInput,
+#metersInput {
+  width: 70%;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin-left: 5%;
+}
+#feetInput,
+#inchesInput {
+  width: 50%;
+  display: block;
+}
+#metersInput {
+  display: none;
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/*Position and styling of slider*/
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: rgba(84, 91, 72, 0.25);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 5%;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: darkolivegreen;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: darkolivegreen;
+  cursor: pointer;
+}

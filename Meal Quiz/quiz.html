@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--Author-->
+    <meta author="Frances Caldwell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Website Title-->
+    <title>Meal Quiz</title>
+    <!--link to my CSS-->
+    <link rel="stylesheet" href="./quiz.css" />
+    <!--link to my JavaScript-->
+    <script src="./quiz.js"></script>
+  </head>
+
+  <body>
+    <!--The Heading-->
+    <h1>
+      <i>.⋆｡⋆˚｡⋆｡˚｡⋆. Meal Quiz .⋆｡⋆˚｡⋆｡˚｡⋆.</i>
+    </h1>
+    <!--Quiz Form-->
+    <form id="quizForm">
+      <ol id="quizQuestions">
+        <!--Quiz Description-->
+        <li index="0" style="display: block">
+          Take Our Quiz!
+          <p id="quizDesc">
+            Welcome to our meal planning quiz! We know that eating healthy and
+            managing health conditions or allergies can be a challenge, but with
+            our quiz, we can help make it easier for you. By answering a few
+            questions about your dietary preferences, restrictions, and
+            lifestyle, we can provide you with a customized meal plan that fits
+            your needs. Whether you're looking to improve your overall health,
+            manage diabetes, reduce inflammation, or simply eat better, we can
+            help you save time and stress by providing you with meal ideas that
+            are tailored to your unique situation. So why wait? Take our quiz
+            now and let us help you plan your meals with ease!
+          </p>
+        </li>
+        <!--Question 1: Why do you want to plan your meals?-->
+        <li index="1" style="display: none">
+          ① Why do you want to plan your meals?
+          <!--Select Reasons-->
+          <ul class="container">
+            <input
+              type="checkbox"
+              class="reasonCheckbox"
+              value="Fitness Reasons"
+            />
+            <span style="margin-left: 5%">Fitness Reasons</span>
+          </ul>
+          <ul class="container">
+            <input
+              type="checkbox"
+              class="reasonCheckbox"
+              value="Medical Reasons"
+            /><span style="margin-left: 5%">Medical Reasons</span>
+          </ul>
+          <ul class="container">
+            <input
+              type="checkbox"
+              class="reasonCheckbox"
+              value="Nutritional Reasons"
+            /><span style="margin-left: 5%">Nutritional Reasons</span>
+          </ul>
+        </li>
+        <!--Question 2: Do you have any food allergies or intolerances?-->
+        <li index="2" style="display: none">
+          ② Do you have any food allergies or intolerances?
+          <!--Select Yes or No-->
+          <ul class="container">
+            <input type="radio" id="yesAllergy" name="allergy" />
+            <span style="margin-left: 5%">Yes</span>
+            <!--Select Allergies/Intolerances-->
+            <div class="multiselect">
+              <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                  <option>Select Allergies/Intolerances</option>
+                </select>
+                <div class="overSelect"></div>
+              </div>
+              <!--Allergy Checkboxes based on: https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know -->
+              <div id="allergyCheckboxes">
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Milk"
+                    style="width: 15px; height: 15px"
+                  />Milk</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Eggs"
+                    style="width: 15px; height: 15px"
+                  />Eggs</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Fish"
+                    style="width: 15px; height: 15px"
+                  />Fish (e.g., bass, flounder, cod)</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Crustacean Shellfish"
+                    style="width: 15px; height: 15px"
+                  />Crustacean Shellfish (e.g., crab, lobster, shrimp)</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Tree Nuts"
+                    style="width: 15px; height: 15px"
+                  />Tree Nuts (e.g., almonds, walnuts, pecans)</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Peanuts"
+                    style="width: 15px; height: 15px"
+                  />Peanuts</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Wheat"
+                    style="width: 15px; height: 15px"
+                  />Wheat</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Soybeans"
+                    style="width: 15px; height: 15px"
+                  />Soybeans</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Sesame"
+                    style="width: 15px; height: 15px"
+                  />Sesame</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Red Meat"
+                    style="width: 15px; height: 15px"
+                  />Red Meat</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="allergyCheckbox"
+                    value="Gelatin"
+                    style="width: 15px; height: 15px"
+                  />Gelatin</label
+                >
+              </div>
+            </div>
+          </ul>
+          <ul class="container">
+            <input type="radio" id="noAllergy" name="allergy" /><span
+              style="margin-left: 5%"
+              >No</span
+            >
+          </ul>
+        </li>
+        <!--Question 3: Do you have any medical conditions or dietary restrictions?-->
+        <li index="3" style="display: none">
+          ③ Do you have any medical conditions or dietary restrictions?
+          <!--Select Yes or No-->
+          <ul class="container">
+            <input type="radio" id="yesDiet" name="diet" />
+            <span style="margin-left: 5%">Yes</span>
+            <!--Select Medical Conditions-->
+            <div class="multiselect">
+              <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                  <option>Select Medical Condition</option>
+                </select>
+                <div class="overSelect"></div>
+              </div>
+              <!--Medical Condition Checkboxes based on: https://www.nutrition.gov/topics/diet-and-health-conditions -->
+              <div id="medicalCheckboxes">
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="AIDS Or HIV"
+                    style="width: 15px; height: 15px"
+                  />AIDS/HIV</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Cancer"
+                    style="width: 15px; height: 15px"
+                  />Cancer</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Dementia and Alzheimers"
+                    style="width: 15px; height: 15px"
+                  />Dementia/Alzheimer's</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Diabetes"
+                    style="width: 15px; height: 15px"
+                  />Diabetes</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Digestive Disorder"
+                    style="width: 15px; height: 15px"
+                  />Digestive Disorder</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="High Blood Pressure"
+                    style="width: 15px; height: 15px"
+                  />High Blood Pressure</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Kidney Disease"
+                    style="width: 15px; height: 15px"
+                  />Kidney Disease</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Osteoporosis"
+                    style="width: 15px; height: 15px"
+                  />Osteoporosis</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Obesity"
+                    style="width: 15px; height: 15px"
+                  />Obesity</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="General Surgery"
+                    style="width: 15px; height: 15px"
+                  />Surgery (General)</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Parkinsons Disease"
+                    style="width: 15px; height: 15px"
+                  />Parkinson's Disease</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="medicalCheckbox"
+                    value="Dysphagia Swallowing Difficulties"
+                    style="width: 15px; height: 15px"
+                  />Swallowing Difficulties (Dysphagia)</label
+                >
+              </div>
+            </div>
+            <!--Select Diet-->
+            <div class="multiselect">
+              <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                  <option>Select Diet</option>
+                </select>
+                <div class="overSelect"></div>
+              </div>
+              <div id="dietCheckboxes">
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Mechanical Soft Diet"
+                    style="width: 15px; height: 15px"
+                  />Mechanical Soft</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Puree Diet"
+                    style="width: 15px; height: 15px"
+                  />Puree</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Low Fiber Diet"
+                    style="width: 15px; height: 15px"
+                  />Low Fiber/"GI Soft"</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Carb Controlled Diet"
+                    style="width: 15px; height: 15px"
+                  />Carb Controlled</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Cardiac Diet"
+                    style="width: 15px; height: 15px"
+                  />Cardiac</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Thickened Liquids Diet"
+                    style="width: 15px; height: 15px"
+                  />Thickened Liquids</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Paleo Diet"
+                    style="width: 15px; height: 15px"
+                  />Paleo</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Low Carb Diet"
+                    style="width: 15px; height: 15px"
+                  />Low-Carb</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Low Fat Diet"
+                    style="width: 15px; height: 15px"
+                  />Low-Fat</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Ketogenic Diet"
+                    style="width: 15px; height: 15px"
+                  />Ketogenic</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Mediterranean Diet"
+                    style="width: 15px; height: 15px"
+                  />Mediterranean</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="Nordic Diet"
+                    style="width: 15px; height: 15px"
+                  />Nordic</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="DASH Diet"
+                    style="width: 15px; height: 15px"
+                  />DASH</label
+                >
+                <label>
+                  <input
+                    type="checkbox"
+                    class="dietCheckbox"
+                    value="MIND Diet"
+                    style="width: 15px; height: 15px"
+                  />MIND</label
+                >
+              </div>
+            </div>
+          </ul>
+          <ul class="container">
+            <input type="radio" id="noDiet" name="diet" /><span
+              style="margin-left: 5%"
+              >No</span
+            >
+          </ul>
+        </li>
+        <!--Question 4: Do you follow a vegan or vegetarian diet?-->
+        <li index="4" style="display: none">
+          ④ Do you follow a vegan or vegetarian diet?
+          <!--Select Yes or No-->
+          <ul class="container">
+            <input type="radio" id="yesPlantbased" name="plantbased" />
+            <span style="margin-left: 5%">Yes</span>
+            <!--Plantbased Diets Checkboxes-->
+            <div id="plantbasedCheckboxes">
+              <b>Select One:</b>
+              <label>
+                <input
+                  type="radio"
+                  class="plantbasedCheckbox"
+                  value="Vegan"
+                  style="width: 15px; height: 15px"
+                  name="plantbasedOption"
+                  id="vegan"
+                />Vegan</label
+              >
+              <label>
+                <input
+                  type="radio"
+                  class="plantbasedCheckbox"
+                  value="Vegetarian"
+                  style="width: 15px; height: 15px"
+                  name="plantbasedOption"
+                  id="vegetarian"
+                />Vegetarian</label
+              >
+            </div>
+          </ul>
+          <ul class="container">
+            <input type="radio" id="noPlantbased" name="plantbased" /><span
+              style="margin-left: 5%"
+              >No</span
+            >
+          </ul>
+        </li>
+        <!--Question 5: Do you have any ingredients you want to exclude from your meal plan?-->
+        <li index="5" style="display: none">
+          ⑤ Do you have any ingredients you want to exclude from your meal plan?
+          <!--Text Area-->
+          <ul class="container">
+            <textarea
+              type="textarea"
+              placeholder="Type your answer"
+              id="excludedIngredients"
+            ></textarea>
+          </ul>
+        </li>
+        <!--Question 6: Are you male or female?-->
+        <li index="6" style="display: none">
+          ⑥ Are you male or female?
+          <!--Select Yes or No-->
+          <ul class="container">
+            <input type="radio" id="mGender" name="gender" value="Male" />
+            <span style="margin-left: 5%">Male</span>
+          </ul>
+          <ul class="container">
+            <input
+              type="radio"
+              id="fGender"
+              name="gender"
+              value="Female"
+            /><span style="margin-left: 5%">Female</span>
+          </ul>
+          <ul class="container">
+            <input
+              type="radio"
+              id="naGender"
+              name="gender"
+              value="Prefers not to say"
+            /><span style="margin-left: 5%">Prefer not to say</span>
+          </ul>
+        </li>
+        <!--Question 7: What is your weight?-->
+        <li index="7" style="display: none">
+          ⑦ What is your weight?
+          <!--Input Weight in Pounds or Kilograms-->
+          <ul class="smallContainer">
+            <input id="input" type="number" placeholder="Enter weight..." />
+            <div id="poundsOutput"></div>
+            <div id="kgOutput"></div>
+            <select id="select-weight">
+              <option disabled="disable" selected="selected">...</option>
+              <option>Pounds</option>
+              <option>Kilograms</option>
+            </select>
+          </ul>
+        </li>
+        <!--Question 8: What is your height?-->
+        <li index="8" style="display: none">
+          ⑧ What is your height?
+          <!--Input Height in Feet/Inches or Meters/Centimeters-->
+          <ul class="smallContainer">
+            <input id="feetInput" type="number" placeholder="Enter ft..." />
+            <input id="inchesInput" type="number" placeholder="Enter in..." />
+            <input
+              id="metersInput"
+              type="number"
+              placeholder="Enter m..."
+              step=".01"
+            />
+            <div id="feetOutput"></div>
+            <div id="metersOutput"></div>
+            <select id="select-height">
+              <option disabled="disable" selected="selected">...</option>
+              <option>Feet/Inches</option>
+              <option>Meters/Centimeters</option>
+            </select>
+          </ul>
+        </li>
+        <!--Question 9: What is your age?-->
+        <li index="9" style="display: none">
+          ⑨ What is your age?
+          <!--Age slider-->
+          <input type="range" min="18" max="100" class="slider" id="myRange" />
+          <p>Age: <span id="age"></span></p>
+        </li>
+        <!--RESULTS-->
+        <!--(example: someone who is following a low-carb diet, is allergic to shellfish, and is looking to manage their diabetes:)-->
+        <li index="10" style="display: none">
+          Congratulations on completing our meal planning quiz! Based on your
+          answers, we recommend the following meal plan for you:
+          <p id="quizDesc">
+            You indicated that you are following a low-carb diet, which can be
+            helpful for managing diabetes. Foods that are low in carbs include
+            leafy greens, non-starchy vegetables, nuts, seeds, and healthy fats
+            like avocado and olive oil. Here are some meal ideas that meet your
+            dietary preferences and restrictions: <br /><b>Breakfast:</b>
+            Low-carb smoothie made with unsweetened almond milk, spinach,
+            avocado, and berries <br />
+            <b>Snack:</b> Roasted almonds with a sprinkle of cinnamon <br /><b
+              >Lunch:</b
+            >
+            Grilled chicken salad with mixed greens, non-starchy vegetables, and
+            a low-carb dressing Snack: Celery sticks with almond butter
+            <br /><b>Dinner:</b> Baked salmon with roasted asparagus and
+            cauliflower rice We also noted that you are allergic to shellfish.
+            <br />Some good seafood options that do not contain shellfish
+            include salmon, tuna, and sardines, which are rich in omega-3 fatty
+            acids that can help with inflammation and heart health.
+          </p>
+          Create an account to save your preferences!
+          <!--Create an Account Button-->
+          <button><b>SIGN UP</b></button>
+        </li>
+      </ol>
+      <!--START/CONTINUE Button-->
+      <button type="submit" id="next"><b>START →</b></button>
+    </form>
+  </body>
+</html>
