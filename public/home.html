@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTA Blog</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        src="images/logo.png"
+        class="logo"
+        alt=""
+        style="width: 20%; height: 100%"
+      />
+      <ul class="links-container">
+        <li class="link-item"><a href="/" class="link">HOME</a></li>
+        <li class="link-item"><a href="/" class="link">ABOUT</a></li>
+        <li class="link-item"><a href="/" class="link">SERVICES</a></li>
+        <li class="link-item"><a href="/" class="link">BLOG</a></li>
+        <li class="link-item"><a href="/" class="link">MEDIA</a></li>
+        <li class="link-item"><a href="/" class="link">CONTACT</a></li>
+        <li class="link-item"><a href="/" class="link">WE SUPPORT</a></li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="content" id="banner-left">
+        <div class="center-wrapper">
+          <img src="images/insights.png" style="width: 85%" />
+          <hr class="solid" />
+          <h1 class="heading">
+            <span class="small"
+              >Check out the newest security articles, and keep your company
+              safe from cyber threats!</span
+            >
+          </h1>
+          <a href="editor.html" class="btn">write a blog</a>
+        </div>
+      </div>
+      <div class="content" id="banner-right">
+        <section class="newest-blog"></section>
+      </div>
+    </header>
+
+    <div class="filter">
+      <!-- The second value will be selected initially -->
+      <select name="choice" class="choice" id="sort-select">
+        <option selected>order by:</option>
+        <option value="Physical">Physical Security</option>
+        <option value="Drone">Drones</option>
+        <option value="Cyber">Cyber Security</option>
+        <option value="AI">Artificial Intelligence</option>
+      </select>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search.."
+            name="search"
+          />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="blog-wrapper">
+      <h2>Physical Security</h2>
+      <section class="blogs-section" id="physical-section">
+        <button type="button" class="prev">&laquo</button>
+        <button type="button" class="next">&raquo;</button>
+      </section>
+
+      <h2>Drone Security</h2>
+      <section class="blogs-section" id="drone-section">
+        <button type="button" class="prev">&laquo</button>
+        <button type="button" class="next">&raquo;</button>
+      </section>
+
+      <h2>Cyber Security</h2>
+      <section class="blogs-section" id="cyber-section">
+        <button type="button" class="prev">&laquo</button>
+        <button type="button" class="next">&raquo;</button>
+      </section>
+
+      <h2>Artificial Intelligence</h2>
+      <section class="blogs-section" id="ai-section">
+        <button type="button" class="prev">&laquo</button>
+        <button type="button" class="next">&raquo;</button>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
